@@ -1,23 +1,133 @@
 aid: veeqo
+
 name: Veeqo
-description: 'Veeqo is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.veeqo.com/images/image-meta-og.png?w=1200&h=630
+
+description: Veeqo provides a cloud‑based platform that helps online retailers manage inventory, orders, shipping, and reporting across multiple
+  sales channels. The solution integrates with major e‑commerce marketplaces, shopping carts, and shipping carriers, offering real‑time synchronization,
+  automated fulfillment workflows, and analytics to streamline operations and improve customer experience. Veeqo’s API enables developers to programmatically
+  access product catalogs, order data, stock levels, and shipping labels, supporting custom integrations and extensions for businesses seeking
+  to scale their multi‑channel commerce operations.
+
 url: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-13'
+
 modified: '2026-10-13'
+
 tags:
 - Company
-apis: []
+- e-commerce
+- inventory-management
+- order-fulfillment
+- multi-channel
+- SaaS
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/veeqo-plans-pricing.yml
+- type: Spectral
+  url: rules/veeqo-rules.yml
+- type: JSONLD
+  url: json-ld/veeqo-context.jsonld
+- type: Vocabulary
+  url: vocabulary/veeqo-vocabulary.yml
+- type: DataModel
+  url: data-model/veeqo-data-model.yml
+- type: Conformance
+  url: conformance/veeqo-conformance.yml
+- type: LLMsTxt
+  url: llms/veeqo-llms.txt
+- type: SecurityTxt
+  url: well-known/veeqo-help-security.txt
+- type: WellKnown
+  url: well-known/veeqo-well-known.yml
+- type: Hosts
+  url: hosts/veeqo-hosts.yml
+- type: Vendors
+  url: vendors/veeqo-vendors.yml
+- type: SDKs
+  url: packages/veeqo-packages.yml
+- type: Packages
+  url: packages/veeqo-packages.yml
+- type: TermsOfService
+  url: https://www.veeqo.com/terms-of-service
+- type: Support
+  url: https://help.veeqo.com
+- type: StatusPage
+  url: https://status.veeqo.com/
+- type: Security
+  url: https://www.veeqo.com/security
+- type: PrivacyPolicy
+  url: https://www.veeqo.com/privacy
+- type: Pricing
+  url: https://www.veeqo.com/pricing
+- type: Login
+  url: https://app.veeqo.com/signin
+- type: Blog
+  url: https://www.veeqo.com/blog
+- type: GettingStarted
+  url: https://help.veeqo.com/en/articles/14087861-getting-started-with-veeqo-uk
+- type: Documentation
+  url: https://developers.veeqo.com/
+- type: GitHubOrganization
+  url: https://github.com/veeqo
+- type: DomainSecurity
+  url: security/veeqo-domain-security.yml
 - type: Website
   url: https://www.veeqo.com
+
+apis:
+- name: Veeqo API
+  description: Programmatic access to product catalogs, order data, stock levels, and shipping labels.
+  humanURL: https://developers.veeqo.com/
+  baseURL: null
+  aid: veeqo:veeqo-api-2
+- aid: veeqo:veeqo-api
+  name: Veeqo API
+  description: 'Veeqo API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-13); not
+
+    the provider''s own document.'
+  humanURL: https://developers.veeqo.com/getting-started/authentication
+  baseURL: https://api.veeqo.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/veeqo-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/veeqo-post-oauth-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/veeqo-get-current-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/veeqo-post-oauth-token-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Developers site provides HTML docs but no OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract.
+  evidence:
+  - url: https://developers.veeqo.com/
+    status: 200
+  checked: '2026-10-13'
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

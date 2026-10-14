@@ -1,0 +1,11 @@
+generated: '2026-10-13'
+method: probed
+source: https://help.veeqo.com/en/articles/6248766-gdpr-process.md
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://help.veeqo.com/en/articles/6248766-gdpr-process.md
+        http_status: 200
+        fetched: /tmp/gdpr.html
+        quote: "In order to request data removal in line with GDPR laws, please contact our Support Team at <helpme@support.veeqo.com>, or via chat."
+        note: Allows users to request deletion of their personal data.

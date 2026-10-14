@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "@vocab": "https://veeqo.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "veeqo": "https://veeqo.com/schema#",
+    "GetCurrentUserResponse": "veeqo:GetCurrentUserResponse",
+    "access_token": {
+      "@id": "veeqo:access_token",
+      "@type": "xsd:string"
+    },
+    "token_type": {
+      "@id": "veeqo:token_type",
+      "@type": "xsd:string"
+    },
+    "created_at": {
+      "@id": "veeqo:created_at",
+      "@type": "xsd:integer"
+    },
+    "PostOauthTokenRequest": "veeqo:PostOauthTokenRequest",
+    "grant_type": {
+      "@id": "veeqo:grant_type",
+      "@type": "xsd:string"
+    },
+    "redirect_uri": {
+      "@id": "veeqo:redirect_uri",
+      "@type": "xsd:string"
+    },
+    "client_id": {
+      "@id": "veeqo:client_id",
+      "@type": "xsd:string"
+    },
+    "client_secret": {
+      "@id": "veeqo:client_secret",
+      "@type": "xsd:string"
+    },
+    "code": {
+      "@id": "veeqo:code",
+      "@type": "xsd:string"
+    },
+    "PostOauthTokenResponse": "veeqo:PostOauthTokenResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Veeqo API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Veeqo's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-13) from openapi/_ae-authored/veeqo-openapi-generated.yml.",
+  "dcterms:created": "2026-10-13",
+  "dcterms:source": [
+    "openapi/_ae-authored/veeqo-openapi-generated.yml"
+  ]
+}

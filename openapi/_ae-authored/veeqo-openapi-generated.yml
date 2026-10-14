@@ -1,0 +1,139 @@
+openapi: 3.1.0
+info:
+  title: Veeqo API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 3 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Veeqo has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 1
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developers.veeqo.com/getting-started/authentication
+servers:
+- url: https://api.veeqo.com
+paths:
+  /current_user:
+    get:
+      operationId: get_current_user
+      tags:
+      - Current User
+      summary: GET /current_user
+      x-source: https://developers.veeqo.com/getting-started/authentication
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCurrentUserResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl); The API request will return a JSON object with the following properties: { \n \"access_token\" : \"82d7b651f3634a5243c4155f8832f09b30de0c115280d0c2ef62512e6bc5312e\"\
+          \ , \n \"token_type\" : \"bearer\" , \n \"created_at\" : 1510741588 \n } From this point, you can save the returned access_token from\
+          \ the previous request and use this for any future requests as a bearer token. Here's an example of using the b"
+  /oauth/token:
+    post:
+      operationId: post_oauth_token
+      tags:
+      - Oauth
+      summary: Authentication
+      x-source: https://developers.veeqo.com/getting-started/authentication
+      parameters:
+      - name: Accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostOauthTokenRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostOauthTokenResponse'
+      x-evidence:
+        kind: documentation
+  /orders:
+    get:
+      operationId: get_orders
+      tags:
+      - Orders
+      summary: GET /orders
+      x-source: https://developers.veeqo.com/getting-started/authentication
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl); API keys for private usage \nIf you are a Veeqo seller building a private integration for your own\n business, you may\
+          \ use API keys instead of OAuth 2.0.\nThese keys give full API access to your account — treat them like passwords.\n Generating your\
+          \ API keys \nPlease contact support at helpme@support.veeqo.com \nor through the support messenger in the Veeqo App before following\
+          \ these steps if you"
+components:
+  schemas:
+    GetCurrentUserResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+        token_type:
+          type: string
+        created_at:
+          type: integer
+    PostOauthTokenRequest:
+      type: object
+      properties:
+        grant_type:
+          type: string
+        redirect_uri:
+          type: string
+        client_id:
+          type: string
+        client_secret:
+          type: string
+        code:
+          type: string
+      required:
+      - grant_type
+      - redirect_uri
+      - client_id
+      - client_secret
+      - code
+    PostOauthTokenResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+        token_type:
+          type: string
+        created_at:
+          type: integer
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key
+security:
+- apiKey: []
+tags:
+- name: Current User
+- name: Oauth
+- name: Orders

@@ -1,0 +1,24 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.veeqo.com/pricing
+sources:
+- https://www.veeqo.com/pricing
+- https://help.veeqo.com/en/articles/14729298-veeqo-plans-overview.md
+- https://help.veeqo.com/en/articles/14526507-high-volume-paid-plan.md
+name: Veeqo pricing
+audience: business-product
+pricing_basis: usage-other
+plans:
+- name: Shipping
+  price_text: Free
+  description: All the features you need to ship your multichannel orders efficiently. Free forever.
+- name: Inventory
+  price_text: from $19/month
+  price: 19
+  description: Scale your business with automated inventory management, digital picking, and unlimited multichannel listings.
+- name: High Volume
+  price_text: from $350/month
+  price: 350
+  description: Access a dedicated account manager, API consulting, priority support, and ERP integration.
+docs: https://www.veeqo.com/pricing

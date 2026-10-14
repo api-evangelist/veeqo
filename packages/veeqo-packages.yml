@@ -1,0 +1,24 @@
+generated: '2026-10-13'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io) ; github.com/veeqo
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (security/veeqo-domain-security.yml,
+  veeqo.com) or its accepted GitHub org (veeqo).'
+packages:
+- name: veeqo
+  registry: rubygems
+  url: https://rubygems.org/gems/veeqo
+  language: Ruby
+  official: true
+  version: 0.1.1
+  published: '2017-03-15'
+  evidence: metadata names veeqo.com
+- name: api2cart-ruby
+  registry: github
+  url: https://github.com/veeqo/api2cart-ruby
+  language: Ruby
+  official: true
+  version: null
+  published: '2021-07-14'
+  source_repo: https://github.com/veeqo/api2cart-ruby
+  evidence: repository in github.com/veeqo, whose profile names the provider's domain

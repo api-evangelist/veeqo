@@ -1,0 +1,6 @@
+generated: '2026-10-13'
+method: probed
+generator: harvest-llms.py
+source: https://help.veeqo.com/llms.txt
+bytes: 29247
+note: saved verbatim; the provider's own document
