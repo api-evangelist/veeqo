@@ -1,0 +1,20 @@
+{
+  "provider": "veeqo",
+  "sources": [
+    "_ae-authored/veeqo-openapi-generated.yml"
+  ],
+  "outputs": [
+    "veeqo-current-user-api-openapi.yml",
+    "veeqo-oauth-api-openapi.yml",
+    "veeqo-orders-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "veeqo-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+3 apis, 4 total)"
+  ],
+  "skipped": []
+}

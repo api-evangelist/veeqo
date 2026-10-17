@@ -99,24 +99,54 @@ apis:
   humanURL: https://developers.veeqo.com/
   baseURL: null
   aid: veeqo:veeqo-api-2
-- aid: veeqo:veeqo-api
-  name: Veeqo API
-  description: 'Veeqo API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-13); not
-
-    the provider''s own document.'
-  humanURL: https://developers.veeqo.com/getting-started/authentication
+- aid: veeqo:veeqo-current-user-api
+  name: Veeqo Current User API
+  description: The Current User API from Veeqo — 1 operation(s) for current user.
+  humanURL: https://developers.veeqo.com/
   baseURL: https://api.veeqo.com
+  tags:
+  - Current User
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/veeqo-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/veeqo-current-user-api-openapi.yml
   - type: JSONSchema
     url: json-schema/veeqo-post-oauth-token-request-schema.json
   - type: JSONSchema
     url: json-schema/veeqo-get-current-user-response-schema.json
   - type: JSONSchema
     url: json-schema/veeqo-post-oauth-token-response-schema.json
-
+- aid: veeqo:veeqo-oauth-api
+  name: Veeqo OAuth API
+  description: The Oauth API from Veeqo — 1 operation(s) for oauth.
+  humanURL: https://developers.veeqo.com/
+  baseURL: https://api.veeqo.com
+  tags:
+  - Oauth
+  properties:
+  - type: OpenAPI
+    url: openapi/veeqo-oauth-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/veeqo-post-oauth-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/veeqo-get-current-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/veeqo-post-oauth-token-response-schema.json
+- aid: veeqo:veeqo-orders-api
+  name: Veeqo Orders API
+  description: The Orders API from Veeqo — 1 operation(s) for orders.
+  humanURL: https://developers.veeqo.com/
+  baseURL: https://api.veeqo.com
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/veeqo-orders-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/veeqo-post-oauth-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/veeqo-get-current-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/veeqo-post-oauth-token-response-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec
