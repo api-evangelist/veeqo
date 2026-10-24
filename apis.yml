@@ -27,6 +27,13 @@ modified: '2026-10-13'
 
 tags:
 - Company
+- E-Commerce
+- Inventory
+- Order Fulfillment
+- Multi-Channel
+- Software-as-a-Service
+tags_raw:
+- Company
 - e-commerce
 - inventory-management
 - order-fulfillment
@@ -121,6 +128,8 @@ apis:
   humanURL: https://developers.veeqo.com/
   baseURL: https://api.veeqo.com
   tags:
+  - Authentication
+  tags_raw:
   - Oauth
   properties:
   - type: OpenAPI
@@ -137,6 +146,8 @@ apis:
   humanURL: https://developers.veeqo.com/
   baseURL: https://api.veeqo.com
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI

@@ -22,3 +22,28 @@ plans:
   price: 350
   description: Access a dedicated account manager, API consulting, priority support, and ERP integration.
 docs: https://www.veeqo.com/pricing
+x-canonical:
+  generated: '2026-10-23'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: Shipping
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Inventory
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: High Volume
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
